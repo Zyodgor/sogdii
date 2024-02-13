@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        <link rel="stylesheet" href="style/css/media.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for Sogdiiiii💕</title>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Ты будешь моей валентинкой ?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Да</button>
+                <button class="btn" id="noButton" onmousemove="moveButton()">Нет</button>
+                <script>
+                    const noButton = document.querySelector('#noButton')
+                    const maxWidth = window.innerWidth - noButton.offsetWidth;
+                    const maxHeight = window.innerHeight - noButton.offsetHeight;
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        noButton.style.position = "absolute";
+                        const randomX = Math.max(0, Math.floor(Math.random() * maxWidth));
+                        const randomY = Math.max(0, Math.floor(Math.random() * maxHeight));
+                        noButton.style.left = randomX + "px";
+                        noButton.style.top = randomY + "px";
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
